@@ -1,0 +1,18 @@
+site_name: nubbe[KG] Docs
+site_url: https://nubbekg.aksw.org/
+extra:
+  homepage: https://nubbekg.aksw.org/
+nav:
+    - About: index.md
+    - Extraction process: extraction/index.md
+    - Dataset statistics: dataset/index.md
+    - How to query: query/index.md
+    - Planned improvements: improve/index.md
+
+theme:
+  icon:
+    logo: material/arrow-left
+  name: material
+  palette:
+    primary: green
+    accent: green
