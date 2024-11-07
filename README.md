@@ -1,4 +1,4 @@
-# This is the NuBBE[KG] dataset webpage
+# This is the BrNPDB dataset webpage
 
 
 ## Contributing
