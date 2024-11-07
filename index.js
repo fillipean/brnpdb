@@ -8,7 +8,7 @@ class IndexHeader extends HTMLElement {
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
     <div class="container">
         <a class="navbar-brand title font-weight-lighter" href="./index.html">
-           <span class="font-weight-bold">NuBBE[KG]</span>
+           <span class="font-weight-bold">BrNPDB</span>
         </a>
       <!-- Navbar Toggle -->
       <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse"
@@ -97,7 +97,7 @@ class SubPageHeader extends HTMLElement {
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
     <div class="container">
         <a class="navbar-brand title font-weight-lighter" href="../index.html">
-           <span class="font-weight-bold">NuBBE[KG]</span>
+           <span class="font-weight-bold">BrNPDB</span>
         </a>
       <!-- Navbar Toggle -->
       <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse"
@@ -222,7 +222,7 @@ class Footer extends HTMLElement {
         <!-- Footer -->
 <footer class="fixed-bottom">
     <div class="container mt-0">
-        © Copyright 2023 NuBBE[KG]
+        © Copyright 2024 BrNPDB
     </div>
 </footer>
       `
