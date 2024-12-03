@@ -8,7 +8,7 @@ const searchAnalysis = async searchText => {
 
 	let matches = analysis.filter(analysis => {
 		const regex = new RegExp(`^${searchText}`, 'gi');
-		return analysis.City_ID_IBGE
+		return analysis.City_ID_IBGE.match(regex);
 	});
 
 	if(searchText.lenght === 0){
@@ -32,7 +32,8 @@ const outputHtml = matches => {
 			 }</span></h4>
 			 <small>Resource: ${match.Natural_Resource_ID} / Species: ${match.Species_ID}</small>
 			 </div>
-			`)
+			`
+		)
 		.join('');
 		
 		matchList.innerHTML = html;
