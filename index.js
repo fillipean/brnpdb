@@ -28,11 +28,11 @@ class IndexHeader extends HTMLElement {
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="./query/index.html">
               query
             </a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="./ontology/index.html">
               ontology
@@ -117,11 +117,11 @@ class SubPageHeader extends HTMLElement {
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          <li id="query-page" class="nav-item ">
+          <!-- <li id="query-page" class="nav-item ">
             <a class="nav-link" href="../query/index.html">
               query
             </a>
-          </li> 
+          </li> -->
           <li id="ontology-page" class="nav-item">
             <a class="nav-link" href="../ontology/index.html">
               ontology
