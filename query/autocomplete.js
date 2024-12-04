@@ -3,7 +3,7 @@ const matchList = document.getElementById('match-list');
 
 // Search .json and filter it
 const searchAnalysis = async searchText => {
-	const res = await fetch('../schema/analysis.json');
+	const res = await fetch('https://brnpdb.fcfrp.usp.br/schema/analysis.json');
 	const analysis = await res.json();
 
 	let matches = analysis.filter(analysis => {
