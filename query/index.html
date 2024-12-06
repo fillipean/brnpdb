@@ -32,32 +32,10 @@
     <body class="fixed-top-nav" data-new-gr-c-s-check-loaded="14.1041.0" data-gr-ext-installed="">
         <!-- Header -->
         <sub-header></sub-header>
-        <main class="container mt-5">
-            <div class="post">
-                <div class="post-header">
-                    <h1 class="post-title">Search</h1>
-                    <p class="desc">Use this search form to find any name in the current version of BrNPDB[KG]:</p>
-                </div>
-                <div class="col-md-12">
-                    <div class="input-group">
-                        <input id="search" type="text" class="form-control" placeholder="Compound, Common Name, SMILES, Species, Bioactivity, Location" aria-describedby="basic-addon1">
-                        <button type="button" class="input-group-text" id="basic-addon1">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"></path>
-                          </svg>
-                        </button>
-                    </div>
-                    <div id="match-list"></div>
-                </div>
+        <main>
+            <div class="container">
+                <div id="yasgui"></div>
             </div>
-
-            <script src="autocomplete.js"></script>
-
-            <div class="post">
-                <p class="desc"><br>Or feel free to query BrNPDB[KG] using SPARQL:</p>
-            </div>
-<!--                <iframe  width="80%" height="800px" src="http://coconut-kg.aksw.org/query/index_yasgui.html" frameborder="0" scrolling="auto" allowfullscreen>    </iframe>-->
-            <div id="yasgui"></div>
         </main>
         <grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
         <!-- Footer -->
@@ -82,20 +60,14 @@
         });
 
         qa = "PREFIX nubbe:  <http://nubbekg.aksw.org/ontology#>" ;
-        qb = "PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" ;
-        qc = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" ;
 
-        qinfo = "#Get the Name, Smiles, molecular formula, species and bioactivity of the first 100 compounds" ;
+        qinfo = "#Get the Name and Smiles of the first 100 compounds" ;
 
-        qd = "SELECT DISTINCT  ?formula ?name ?smiles ?species ?bioactivity" ;
+        qd = "SELECT DISTINCT  ?compound ?name ?smiles" ;
         qe = "WHERE" ;
         qf = "{ ?compound a             					nubbe:Compound ;" ;
-        qg = "                nubbe:molecularFormula  		?formula ;" ;
         qh = "                nubbe:commonName      			?name ;" ;
-        qi = "                nubbe:smiles         		    ?smiles ;" ;
-        qj = "                nubbe:wasSubjectedTo  			?bioanalysis ." ;
-        qk = "    ?compound 	 nubbe:partOfSpecies/rdfs:label ?species ." ;
-        ql = "    ?bioanalysis nubbe:revealed/rdfs:label 		?bioactivity" ;
+        qi = "                nubbe:smiles         		    ?smiles " ;
         qm = "}" ;
         qn = "LIMIT   100" ;
 
