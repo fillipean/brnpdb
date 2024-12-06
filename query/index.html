@@ -60,18 +60,20 @@
         });
 
         qa = "PREFIX nubbe:  <http://nubbekg.aksw.org/ontology#>" ;
+        qb = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" ;
+        qc = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>";
 
         qinfo = "#Get the Name and Smiles of the first 100 compounds" ;
 
         qd = "SELECT DISTINCT  ?compound ?name ?smiles" ;
         qe = "WHERE" ;
         qf = "{ ?compound a             					nubbe:Compound ;" ;
-        qh = "                nubbe:commonName      			?name ;" ;
-        qi = "                nubbe:smiles         		    ?smiles " ;
-        qm = "}" ;
-        qn = "LIMIT   100" ;
+        qg = "                nubbe:commonName      			?name ;" ;
+        qh = "                nubbe:smiles         		    ?smiles " ;
+        qi = "}" ;
+        qj = "LIMIT   100" ;
 
-        query = qa+"\n"+qb+"\n"+qc+"\n\n"+qinfo+"\n\n"+qd+"\n"+qe+"\n"+qf+"\n"+qg+"\n"+qh+"\n"+qi+"\n"+qj+"\n"+qk+"\n"+ql+"\n"+qm+"\n"+qn ;
+        query = qa+"\n"+qb+"\n"+qc+"\n\n"+qinfo+"\n\n"+qd+"\n"+qe+"\n"+qf+"\n"+qg+"\n"+qh+"\n"+qi+"\n"+qj ;
 
         yasgui.getTab().yasqe.setValue(query);
 
