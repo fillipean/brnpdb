@@ -29,6 +29,11 @@ class IndexHeader extends HTMLElement {
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="https://brnpdb.shinyapps.io/BrNPDB/">
+              dashboard
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="./query/index.html">
               query
             </a>
@@ -115,6 +120,11 @@ class SubPageHeader extends HTMLElement {
             <a class="nav-link" href="../index.html">
               about
               <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li id="dashboard-page" class="nav-item">
+            <a class="nav-link" href="https://brnpdb.shinyapps.io/BrNPDB/">
+              dashboard
             </a>
           </li>
           <li id="query-page" class="nav-item ">
