@@ -30,42 +30,29 @@ class IndexHeader extends HTMLElement {
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://brnpdb.shinyapps.io/BrNPDB/">
-              dashboard
+              search compounds
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./query/index.html">
-              query
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./ontology/index.html">
-              ontology
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./dataset/index.html">
-              dataset
-            </a>
-          </li>
+          <!--  
+              <li class="nav-item">
+                <a class="nav-link" href="./query/index.html">
+                  query
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./ontology/index.html">
+                  ontology
+                </a>
+              </li> 
+          -->
           <li class="nav-item">
             <a class="nav-link" href="./license/index.html">
               license
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./partners/index.html">
-              partners
-            </a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="./contact/index.html">
               contact
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./about/index.html">
-              docs
             </a>
           </li>
           <li><button id="light-toggle"></button></li>
@@ -118,42 +105,29 @@ class SubPageHeader extends HTMLElement {
           </li>
           <li id="dashboard-page" class="nav-item">
             <a class="nav-link" href="https://brnpdb.shinyapps.io/BrNPDB/">
-              dashboard
+              search compounds
             </a>
           </li>
-          <li id="query-page" class="nav-item ">
-            <a class="nav-link" href="../query/index.html">
-              query
-            </a>
-          </li>
-          <li id="ontology-page" class="nav-item">
-            <a class="nav-link" href="../ontology/index.html">
-              ontology
-            </a>
-          </li>
-          <li id="dataset-page" class="nav-item ">
-            <a class="nav-link" href="../dataset/index.html">
-              dataset
-            </a>
-          </li>
+            <!-- 
+              <li id="query-page" class="nav-item ">
+                <a class="nav-link" href="../query/index.html">
+                  query
+                </a>
+              </li>
+              <li id="ontology-page" class="nav-item">
+                <a class="nav-link" href="../ontology/index.html">
+                  ontology
+                </a>
+              </li>
+            -->
           <li id="license-page" class="nav-item">
             <a class="nav-link" href="../license/index.html">
               license
             </a>
           </li>
-          <li id="partners-page" class="nav-item ">
-            <a class="nav-link" href="../partners/index.html">
-              partners
-            </a>
-          </li>
           <li id="contact-page" class="nav-item">
             <a class="nav-link" href="../contact/index.html">
               contact
-            </a>
-          </li>
-          <li id="docs-page" class="nav-item">
-            <a class="nav-link" href="../about/index.html">
-              docs
             </a>
           </li>
           <li>
