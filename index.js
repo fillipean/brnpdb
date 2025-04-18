@@ -209,9 +209,36 @@ class Footer extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <!-- Footer -->
-      <footer class="fixed-bottom">
-        <div class="container mt-0">
-            © Copyright 2024 BrNPDB
+      <footer class="fixed-bottom bg-dark text-white">
+        <div class="container text-center">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-md-4">
+              <p>BrNPDB © Copyright 2024 BrNPDB</p>
+            </div>
+            <!--
+              <div class="col-md-4">
+                <h6>Quick Links</h6>
+                <ul class="list-unstyled">
+                  <li><a href="./index.html" class="text-white">About</a></li>
+                  <li><a href="https://brnpdb.shinyapps.io/BrNPDB/" class="text-white">Search Compounds</a></li>
+                  <li><a href="./license/index.html" class="text-white">License</a></li>
+                  <li><a href="./partners/index.html" class="text-white">Contact</a></li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <h6>Follow Us</h6>
+                <a href="https://twitter.com" target="_blank" class="text-white mx-2">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://facebook.com" target="_blank" class="text-white mx-2">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="text-white mx-2">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </div>
+            -->
+          </div>
         </div>
       </footer>
     `;
