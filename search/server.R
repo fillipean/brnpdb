@@ -85,7 +85,6 @@ server <- function(input, output, session) {
                       buttons = c('csv', 'excel', 'pdf'),
                       text = 'Download'
                     )),
-                    columnDefs = list(list(visible=FALSE, targets=c(0,1))))
                   )
   })
   
