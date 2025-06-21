@@ -79,6 +79,7 @@ server <- function(input, output, session) {
                   selection = 'single',
                   options=list(
                     dom = 'Blfrtip',
+                    pageLength = 100,
                     buttons = list(list(
                       extend = 'collection',
                       buttons = c('csv', 'excel', 'pdf'),
