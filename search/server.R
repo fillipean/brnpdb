@@ -49,7 +49,7 @@ server <- function(input, output, session) {
     filters_choices <- compound %>% filter(smiles %in% unique(filters_choices$smiles))
     
     if(input$txtCommonName != "")
-  filters_choices <- filter(filters_choices, grepl(input$txtCommonName, common_name, ignore.case = TRUE))
+      filters_choices <- filter(filters_choices, grepl(input$txtCommonName, common_name, ignore.case = TRUE))
 
     compoundsList$data <- filters_choices
     
