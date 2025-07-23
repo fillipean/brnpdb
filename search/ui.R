@@ -104,16 +104,6 @@ ui <- dashboardPage(
                             min = 0, max = 30, value = c(0, 20))
               ),
               
-              box(
-                title = span(tagList(icon("dna"), "Structure")),
-                collapsible = TRUE,
-                collapsed = TRUE,
-                status = "success",
-                solidHeader = TRUE,
-                
-                reactR::createReactShinyInput("jsme", "jsme-react", "jsme-react")
-              ),
-              
               fluidRow(
                 column(12, align="center",
                   actionButton("btnSearch", "Search Compound(s)", icon("search"), 
@@ -123,9 +113,6 @@ ui <- dashboardPage(
               ),
               
               hidden(
-                tags$script(src = "3Dmol-min.js"),
-                tags$script(src = "3Dmol.ui-min.js"),
-                
                 div(
                   id = "searchResults",
                   
@@ -133,31 +120,22 @@ ui <- dashboardPage(
                   
                   fluidRow(
                     box(
+                      title = "Download",
+                      status = "success",
+                      collapsible = TRUE,
+                      width = 12,
+                      align = "center",
+                      downloadButton("btnCSV","CSV"),
+                      downloadButton("btnSDF","SDF (R-CDK)"),
+                      downloadButton("btnMol2",".mol2")
+                    ),
+                    
+                    box(
                       title = "Results",
+                      status = "success",
+                      collapsible = TRUE,
                       width = 12,
                       DT::dataTableOutput("analysis")
-                    )
-                  ),
-                  
-                  fluidRow(
-                    tabBox(
-                      id = "tabDetails",
-                      title = "Details",
-                      side = "right",
-                      width = 12,
-                      tabPanel("General Info", DT::dataTableOutput("genInfoCompound")),
-                      tabPanel("Chemical Info", 
-                               DT::dataTableOutput("chemInfoCompoundDetails"), 
-                               DT::dataTableOutput("chemInfoCompound")),
-                      tabPanel("2D", imageOutput("imageCompound")),
-                      tabPanel("3D", uiOutput("image3D"),
-                               tags$div(
-                                  `style` = "height: 400px; width: 400px; position: relative;",
-                                  `class` = "viewer_3Dmoljs",
-                                  `data-backgroundcolor` = "0xffffff", 
-                                  `data-style` = "stick", 
-                                  `data-ui` = "true")
-                               )
                     )
                   )
                 )
@@ -167,12 +145,12 @@ ui <- dashboardPage(
       ),
       tabItem(tabName = "statistics",
           fluidRow(
-            valueBox(value = "9.970", subtitle = "Compounds", icon = icon("asterisk", lib="glyphicon"), color = "light-blue", width = 6),
+            valueBox(value = "9.962", subtitle = "Compounds", icon = icon("asterisk", lib="glyphicon"), color = "light-blue", width = 6),
             valueBox(value = "2.998", subtitle = "References", icon = icon("education", lib="glyphicon"), color = "yellow", width = 6),
-            valueBox(value = "2.087", subtitle = "Species", icon = icon("leaf"), color = "green", width = 6),
-            valueBox(value = "266", subtitle = "Biological Propertys", icon = icon("grain", lib="glyphicon"), color = "red", width = 6),
-            valueBox(value = "725", subtitle = "Locations", icon = icon("picture", lib="glyphicon"), color = "orange", width = 6),
-            valueBox(value = "41.312", subtitle = "Analysis", icon = icon("list-alt"), color = "purple", width = 6)
+            valueBox(value = "2.229", subtitle = "Species", icon = icon("leaf"), color = "green", width = 6),
+            valueBox(value = "270", subtitle = "Biological Propertys", icon = icon("grain", lib="glyphicon"), color = "red", width = 6),
+            valueBox(value = "787", subtitle = "Locations", icon = icon("picture", lib="glyphicon"), color = "orange", width = 6),
+            valueBox(value = "47.543", subtitle = "Analysis", icon = icon("list-alt"), color = "purple", width = 6)
           )
       )
     )
