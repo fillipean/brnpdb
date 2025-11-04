@@ -31,7 +31,7 @@ class IndexHeader extends HTMLElement {
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="https://fillipean.shinyapps.io/BrNPDB/">
+                  <a class="nav-link" href="https://brnpdb.shinyapps.io/BrNPDB/">
                     search compounds
                   </a>
                 </li>
@@ -115,7 +115,7 @@ class SubPageHeader extends HTMLElement {
                   </a>
                 </li>
                 <li id="dashboard-page" class="nav-item">
-                  <a class="nav-link" href="https://fillipean.shinyapps.io/BrNPDB/">
+                  <a class="nav-link" href="https://brnpdb.shinyapps.io/BrNPDB/">
                     search compounds
                   </a>
                 </li>
@@ -220,7 +220,7 @@ class Footer extends HTMLElement {
                 <h6>Quick Links</h6>
                 <ul class="list-unstyled">
                   <li><a href="./index.html" class="text-white">About</a></li>
-                  <li><a href="https://fillipean.shinyapps.io/BrNPDB/" class="text-white">Search Compounds</a></li>
+                  <li><a href="https://brnpdb.shinyapps.io/BrNPDB/" class="text-white">Search Compounds</a></li>
                   <li><a href="./license/index.html" class="text-white">License</a></li>
                   <li><a href="./partners/index.html" class="text-white">Contact</a></li>
                 </ul>
